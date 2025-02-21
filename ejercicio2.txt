@@ -1,0 +1,19 @@
+fun main() {
+    // Llamamos la funcion 
+    calcularPromedio()
+}
+
+// Funcion 
+fun calcularPromedio() {
+    // Lista de numeros enteros del 1 al 5
+    val numeros: List<Int> = listOf(1, 2, 3, 4, 5)
+
+    // la suma de los numeros
+    val suma: Int = numeros.sum()
+
+    // Calculamos el promedio
+    val promedio: Double = suma.toDouble() / numeros.size
+
+    println("El promedio es: $promedio")
+}
+//ejercicio2

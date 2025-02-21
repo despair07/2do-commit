@@ -1,0 +1,20 @@
+fun main() {
+    // Lista de numeros enteros
+    val numeros: List<Int> = listOf(1, 2, 3, 4, 5)
+
+    // Llamamos la funcion para verificar si la lista esta ordenada y guardamos el resultado
+    val estaOrdenada: Boolean = verificarOrden(numeros)
+
+    if (estaOrdenada) {
+        println("La lista esta ordenada de forma ascendente.")
+    } else {
+        println("La lista no esta ordenada de forma ascendente.")
+    }
+}
+
+// Funcion que verifica si la lista esta ordenada de forma ascendente
+fun verificarOrden(lista: List<Int>): Boolean {
+   
+    return lista == lista.sorted()
+}
+	//ejercicio3

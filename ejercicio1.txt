@@ -1,0 +1,20 @@
+fun main() {
+    // Llamamos la funcion
+    mostrarMayoresDeEdad()
+}
+
+// Funcion para almacenar nombres y edades
+fun mostrarMayoresDeEdad() {
+    // Listas
+    val nombres: List<String> = listOf("Ana", "Carlos", "Lucia", "Felipe", "Maria")
+    val edades: List<Int> = listOf(17, 20, 18, 16, 22)
+
+    println("Personas mayores o iguales a 18:")
+    
+    for (indice in nombres.indices) {
+        if (edades[indice] >= 18) {
+            println("${nombres[indice]} - ${edades[indice]} años")
+        }
+    }
+}
+//ejercicio1
