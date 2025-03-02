@@ -1,0 +1,11 @@
+// funcion de extension para int que verifica si es divisible por otro numero
+fun Int.esDivisiblePor(divisor: Int): Boolean {
+    return this % divisor == 0
+}
+fun main() {
+    val numero = 10
+
+    // validamos si el numero es divisible por 2
+    val resultado = numero.esDivisiblePor(2)
+    println(resultado)
+}

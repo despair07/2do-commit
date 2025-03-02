@@ -1,0 +1,14 @@
+// funcion de extension para invierte una cadena
+fun String.invertir(): String {
+    var resultado = ""
+    for (caracter in this) {
+        resultado = caracter + resultado
+    }
+    return resultado
+}
+fun main() {
+    val texto = "hola"
+    // llamamos la funcion de extension para invertir la cadena
+    val resultado = texto.invertir()
+    println(resultado) 
+}

@@ -1,0 +1,13 @@
+// funcion de extension boolean que convierte true en si y false en no
+fun Boolean.toSiNo(): String {
+    return if (this) "si" else "no"
+}
+fun main() {
+    val num1 = 9
+    val num2 = 7
+    
+//validar si el #1 es mayor 
+    val esMayor = num1 > num2
+    
+    println(esMayor.toSiNo()) 
+}

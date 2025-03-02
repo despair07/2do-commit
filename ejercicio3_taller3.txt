@@ -1,0 +1,15 @@
+// funcion de extension que devuelve la suma de todos los elementos 
+fun List<Int>.sumarElementos(): Int {
+    var suma = 0
+    for (numero in this) {
+        suma += numero
+    }
+    return suma
+}
+fun main() {
+    val numeros = listOf(10, 20, 30, 40, 5)
+
+    // llamamos la funcion de extension para sumar los elementos
+    val resultado = numeros.sumarElementos()
+    println(resultado)
+}

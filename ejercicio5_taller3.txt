@@ -1,0 +1,10 @@
+// funcion de extension para redondear un numero
+fun Double.redondear(): Int {
+    val parteDecimal = ((this * 10).toInt() % 10) // obtiene la primera cifra decimal
+    return if (parteDecimal >= 5) this.toInt() + 1 else this.toInt()
+}
+fun main() {
+    val numero = 11.5
+    // llamamos la funcion de extension
+    println(numero.redondear()) 
+}
