@@ -1,0 +1,57 @@
+fun main() {
+    // se crea un objeto de la clase Circulo 
+    val circulo = Circulo(2.0)
+    circulo.setColor("azul")
+    println("El color del circulo es: ${circulo.getColor()}")
+    println("El area del circulo es: ${circulo.calcularArea()}")
+    println (" ")
+
+    // se crea un objeto de la clase Rectangulo con base y altura
+    val rectangulo = Rectangulo(4.0, 5.0)
+    rectangulo.setColor("amarillo")
+    println("El color del rectangulo es: ${rectangulo.getColor()}")
+    println("El area del rectangulo es: ${rectangulo.calcularArea()}")
+    println (" ")
+
+    // se crea un objeto de la clase Cuadrado con lado 
+    val cuadrado = Cuadrado(3.0)
+    cuadrado.setColor("verde")
+    println("El color del cuadrado es: ${cuadrado.getColor()}")
+    println("El area del cuadrado es: ${cuadrado.calcularArea()}")
+}
+
+// clase abstracta FormaGeometrica con un atributo color
+abstract class FormaGeometrica {
+    private var color: String = ""
+
+    // metodo para establecer color
+    fun setColor(colorP: String) {
+        this.color = colorP
+    }
+
+    // metodo para obtener color
+    fun getColor(): String {
+        return this.color
+    }
+
+    // metodo abstracto para calcular area
+    abstract fun calcularArea(): Double
+}
+class Circulo(private var radio: Double) : FormaGeometrica() {
+    override fun calcularArea(): Double {
+        return this.radio * this.radio * 3.1416 // formula del area del circulo
+    }
+}
+class Rectangulo(private var base: Double, private var altura: Double) : FormaGeometrica() {
+    override fun calcularArea(): Double {
+        return this.base * this.altura // formula del area del rectangulo
+    }
+}
+class Cuadrado(private var lado: Double) : FormaGeometrica() {
+    override fun calcularArea(): Double {
+        return this.lado * this.lado // formula del area del cuadrado
+    }
+}
+
+
+// https://pl.kotl.in/69oaCEWeJ
